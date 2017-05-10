@@ -1069,7 +1069,6 @@ GameObject:
   - component: {fileID: 1081367229}
   - component: {fileID: 1081367228}
   - component: {fileID: 1081367227}
-  - component: {fileID: 1081367226}
   m_Layer: 0
   m_Name: Target Box
   m_TagString: Untagged
@@ -1090,18 +1089,6 @@ Transform:
   m_Father: {fileID: 1239709575}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
---- !u!114 &1081367226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1081367224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e5a2cd8e323b3b42a7f5a6c5d0e58a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 3
 --- !u!54 &1081367227
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1664,7 +1651,6 @@ GameObject:
   - component: {fileID: 1180305471}
   - component: {fileID: 1180305470}
   - component: {fileID: 1180305469}
-  - component: {fileID: 1180305468}
   m_Layer: 0
   m_Name: Target Box (2)
   m_TagString: Untagged
@@ -1685,18 +1671,6 @@ Transform:
   m_Father: {fileID: 1239709575}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
---- !u!114 &1180305468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1180305466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e5a2cd8e323b3b42a7f5a6c5d0e58a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 3
 --- !u!54 &1180305469
 Rigidbody:
   m_ObjectHideFlags: 0
