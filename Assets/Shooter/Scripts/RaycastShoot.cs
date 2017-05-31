@@ -11,6 +11,7 @@ public class RaycastShoot : MonoBehaviour {
 	public WaitForSeconds shotDuration = new WaitForSeconds(0.07f);
 	private ParticleSystem gunParticles;
 	public GameObject hitObject;
+	public int damage = 2;
 
 	// Use this for initialization
 	void Start () {
@@ -43,7 +44,7 @@ public class RaycastShoot : MonoBehaviour {
 			newObject.GetComponent<ParticleSystem> ().Emit(50);
 			
 			if (hit.transform.gameObject.tag == "Shootable") {
-				hit.transform.gameObject.SetActive (false);
+				hit.transform.gameObject.GetComponent<EnemyHealth>().TakeDamage (damage);
 			}
 				
 		}

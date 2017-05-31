@@ -8,11 +8,13 @@ public class EnemyHealth : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		health = maxHealth;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	public void TakeDamage(int amount) {
+		health -= amount;
+
+		if (health <= 0)
+			gameObject.SetActive (false);
 	}
 }
