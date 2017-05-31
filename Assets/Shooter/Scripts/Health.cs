@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour {
+public class Health : MonoBehaviour {
 	int health;
 	public int maxHealth; 
 
@@ -11,10 +11,15 @@ public class EnemyHealth : MonoBehaviour {
 		health = maxHealth;
 	}
 
-	public void TakeDamage(int amount) {
+	public bool TakeDamage(int amount) {
 		health -= amount;
 
-		if (health <= 0)
+		if (health <= 0) {
+			
 			gameObject.SetActive (false);
+			return true;
+		}
+
+		return false;
 	}
 }

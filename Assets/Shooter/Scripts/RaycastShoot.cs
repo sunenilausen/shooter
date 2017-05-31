@@ -30,13 +30,15 @@ public class RaycastShoot : MonoBehaviour {
 	void Shoot () {
 		gunParticles.Emit (50);
 
-		Vector3 rayOrigin = gunEnd.position;
+		Vector3 rayOrigin = gunEnd.position - 1.2f*gunEnd.transform.forward;
+
+		Vector3 shootorigin = gunEnd.position;
 
 		RaycastHit hit;
 
 		laserLine.SetPosition (0, gunEnd.position);
 
-		if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit)) {
+		if (Physics.Raycast(rayOrigin, gunEnd.transform.forward, out hit)) {
 			laserLine.SetPosition (1, hit.point);
 
 			GameObject newObject = Instantiate (hitObject);
@@ -44,12 +46,16 @@ public class RaycastShoot : MonoBehaviour {
 			newObject.GetComponent<ParticleSystem> ().Emit(50);
 			
 			if (hit.transform.gameObject.tag == "Shootable") {
-				hit.transform.gameObject.GetComponent<EnemyHealth>().TakeDamage (damage);
+				var died =  hit.transform.gameObject.GetComponent<Health>().TakeDamage (damage);
+				if (died) {
+					GetComponentInParent <PointManager> ().AddPoint ();
+				}
+
 			}
 				
 		}
 		else {
-			laserLine.SetPosition (1, rayOrigin + (fpsCam.transform.forward * weaponRange));
+			laserLine.SetPosition (1, shootorigin + (gunEnd.transform.forward * weaponRange));
 		}
 
 		StartCoroutine (ShotEffect ());
