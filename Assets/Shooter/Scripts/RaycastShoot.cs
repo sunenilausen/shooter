@@ -38,7 +38,7 @@ public class RaycastShoot : MonoBehaviour {
 
 		laserLine.SetPosition (0, gunEnd.position);
 
-		if (Physics.Raycast(rayOrigin, gunEnd.transform.forward, out hit)) {
+		if (Physics.Raycast(rayOrigin - fpsCam.transform.forward, fpsCam.transform.forward, out hit)) {
 			laserLine.SetPosition (1, hit.point);
 
 			GameObject newObject = Instantiate (hitObject);
