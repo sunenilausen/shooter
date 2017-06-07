@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 32200912}
   - component: {fileID: 32200914}
   - component: {fileID: 32200913}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ShooterFPSWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3947,6 +3947,14 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_IsPrefabParent: 0
@@ -4659,7 +4667,7 @@ GameObject:
   - component: {fileID: 1327102347}
   - component: {fileID: 1327102349}
   - component: {fileID: 1327102348}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GunEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4784,7 +4792,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1562905655
+  randomSeed: -1102618503
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7537,7 +7545,7 @@ GameObject:
   - component: {fileID: 1505249021}
   - component: {fileID: 1505249019}
   - component: {fileID: 1505249020}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
